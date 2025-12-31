@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crits n Shits — НРІ</title>
+    <link rel="stylesheet" href="dist/assets/index-BaOOp61W.css">
+</head>
+<body>
+<header class="topbar" id="top">
+    <div class="container topbar__inner">
+        <a class="brand" href="/#games" aria-label="Crits n Shits">
+            <span class="brand__logo" aria-hidden="true">
+                <img class="brand__logoImg" src="/images/logo.png" alt="" />
+            </span>
+            <span class="brand__txt">
+                <span class="brand__title">Crits n Shits</span>
+                <span class="brand__sub">Каталог: НРІ</span>
+            </span>
+        </a>
+        <a class="btn btn--mini btn--ghost" href="/#games">← Назад</a>
+    </div>
+</header>
+
+<main>
+    <section class="section">
+        <div class="container">
+            <div class="section__head">
+                <h2 class="h2">НРІ</h2>
+                <p class="lead">Пошук та сортування по бібліотеці.</p>
+            </div>
+
+            <div class="controlsBar">
+                <input id="q" class="controlsBar__input" placeholder="Пошук за назвою, описом або тегами..." />
+                <select id="sort" class="controlsBar__select">
+                    <option value="title-asc">Назва (А-Я)</option>
+                    <option value="title-desc">Назва (Я-А)</option>
+                    <option value="players-asc">Гравці (мін ↑)</option>
+                    <option value="players-desc">Гравці (макс ↓)</option>
+                    <option value="time-asc">Час (мін ↑)</option>
+                    <option value="time-desc">Час (макс ↓)</option>
+                </select>
+            </div>
+
+            <div id="list"></div>
+            <div class="muted" id="hint"></div>
+        </div>
+    </section>
+</main>
+
+<script type="module">
+    import "./src/style.css";
+    import { initFullList } from "./src/pages/full-list.js";
+    initFullList({ type: "rpg" });
+</script>
+</body>
+</html>

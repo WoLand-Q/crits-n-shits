@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crits n Shits — Галерея</title>
+    <link rel="stylesheet" href="dist/assets/index-BaOOp61W.css">
+</head>
+<body>
+<header class="topbar" id="top">
+    <div class="container topbar__inner">
+        <a class="brand" href="/#gallery" aria-label="Crits n Shits">
+            <span class="brand__logo" aria-hidden="true">
+                <img class="brand__logoImg" src="/images/logo.png" alt="" />
+            </span>
+            <span class="brand__txt">
+                <span class="brand__title">Crits n Shits</span>
+                <span class="brand__sub">Галерея</span>
+            </span>
+        </a>
+        <a class="btn btn--mini btn--ghost" href="/#gallery">← Назад</a>
+    </div>
+</header>
+
+<main>
+    <section class="section">
+        <div class="container">
+            <div class="section__head">
+                <h2 class="h2">Галерея</h2>
+                <p class="lead">Фото з івентів та ігрових вечорів.</p>
+            </div>
+
+            <div class="controlsBar">
+                <input id="q" class="controlsBar__input" placeholder="Пошук за підписом..." />
+                <select id="sort" class="controlsBar__select">
+                    <option value="alt-asc">Підпис (А-Я)</option>
+                    <option value="alt-desc">Підпис (Я-А)</option>
+                </select>
+            </div>
+
+            <div class="galleryGrid" id="galleryGrid"></div>
+            <div class="muted" id="hint"></div>
+        </div>
+    </section>
+</main>
+
+<div class="lb" id="lb" aria-hidden="true">
+  <div class="lb__backdrop" data-lb-close></div>
+  <div class="lb__panel" role="dialog" aria-modal="true" aria-label="Перегляд фото">
+    <button class="lb__close" type="button" data-lb-close aria-label="Закрити">×</button>
+    <img class="lb__img" id="lbImg" alt="" />
+    <div class="lb__cap" id="lbCap"></div>
+  </div>
+</div>
+
+<script type="module">
+    import "./src/style.css";
+    import { initGalleryFull } from "./src/pages/gallery-full.js";
+    initGalleryFull();
+</script>
+</body>
+</html>

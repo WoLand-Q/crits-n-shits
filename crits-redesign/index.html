@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#05050a" />
+    <style>
+      html{background:#05050a;color-scheme:dark;}
+      body{margin:0;background:#05050a;color:rgba(255,255,255,.92);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;}
+    </style>
+    <title>Crits n Shits — ігровий клуб</title>
+
+    <meta name="description" content="Crits n Shits — клуб настільних, рольових і тактичних ігор у Кам'янському. Розклад, ігри, майстри, галерея та правила." />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:site_name" content="Crits n Shits" />
+    <meta property="og:title" content="Crits n Shits — ігровий клуб" />
+    <meta property="og:description" content="Розклад івентів, настолки, НРІ та варгейми. Приєднуйся до ком’юніті." />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Crits n Shits — ігровий клуб" />
+    <meta name="twitter:description" content="Розклад, ігри, майстри, галерея." />    <link rel="preload" href="dist/assets/index-BaOOp61W.css" as="style" />
+
+    <link rel="stylesheet" href="dist/assets/index-BaOOp61W.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+<div class="fx" aria-hidden="true">
+    <div class="fx__grain"></div>
+    <div class="fx__scan"></div>
+    <div class="fx__blob fx__blob--a"></div>
+    <div class="fx__blob fx__blob--b"></div>
+    <div class="fx__blob fx__blob--c"></div>
+</div>
+
+<a class="skip" href="#about">Перейти до контенту</a>
+
+<header class="topbar" id="top">
+    <div class="container topbar__inner">
+        <a class="brand" href="#top" aria-label="Crits n Shits">
+        <span class="brand__logo" aria-hidden="true">
+          <img class="brand__logoImg" src="/images/logo.png" alt="" onerror="this.remove()" />
+          <svg class="ico" style="width:22px;height:22px"><use href="/icons.svg#logo-dice"></use></svg>
+        </span>
+            <span class="brand__txt">
+          <span class="brand__title">Crits n Shits</span>
+          <span class="brand__sub">Клуб настільних, рольових і тактичних ігор</span>
+        </span>
+        </a>
+
+        <button class="burger" id="navToggle" aria-label="Меню" aria-expanded="false">
+            <svg class="ico" aria-hidden="true"><use href="/icons.svg#menu"></use></svg>
+        </button>
+
+        <nav class="nav" id="nav" aria-label="Навігація">
+            <a href="#about">Про нас</a>
+            <a href="#events">Розклад</a>
+            <a href="#games">Ігри</a>
+            <a href="#masters">Майстри</a>
+            <a href="#gallery">Галерея</a>
+            <a href="#rules">Правила</a>
+            <a href="#contacts">Контакти</a>
+        </nav>
+    </div>
+
+    <div class="progress" aria-hidden="true">
+        <div class="progress__bar" id="scrollProgress"></div>
+    </div>
+</header>
+
+<main>
+    <section class="hero" id="hero">
+        <div class="container hero__grid">
+            <div class="hero__copy">
+                <div class="pill" data-anim>
+                    <span class="pill__dot" aria-hidden="true"></span>
+                    <span>Кам’янське • Ком’юніті • Ігри щотижня</span>
+                </div>
+
+                <h1 class="hero__h1" data-anim>
+                    Грай. Роли. Тактика.
+                    <span class="hero__h1Accent">Люди, які шарять.</span>
+                </h1>
+
+                <p class="hero__p" data-anim>
+                    Настолки, НРІ, варгейми та івенти. Без зайвого пафосу — зате з історіями,
+                    кубами, мініатюрами і комфортом для новачків.
+                </p>
+
+                <div class="hero__actions" data-anim>
+                    <a class="btn btn--primary" href="#events">
+                        <svg class="ico" aria-hidden="true"><use href="/icons.svg#calendar"></use></svg>
+                        Переглянути розклад
+                    </a>
+                    <a class="btn btn--ghost" href="https://t.me/crits_n_shits" target="_blank" rel="noreferrer">
+                        <svg class="ico" aria-hidden="true"><use href="/icons.svg#chat"></use></svg>
+                        Telegram
+                    </a>
+                    <a class="btn btn--ghost" href="#games">
+                        <svg class="ico" aria-hidden="true"><use href="/icons.svg#gamepad"></use></svg>
+                        Подивитись ігри
+                    </a>
+                </div>
+
+                <div class="chips" data-anim>
+                    <span class="chip"><svg class="ico ico--mini" aria-hidden="true"><use href="/icons.svg#dice"></use></svg> Настолки</span>
+                    <span class="chip"><svg class="ico ico--mini" aria-hidden="true"><use href="/icons.svg#sword"></use></svg> НРІ</span>
+                    <span class="chip"><svg class="ico ico--mini" aria-hidden="true"><use href="/icons.svg#chess"></use></svg> Варгейми</span>
+                    <span class="chip"><svg class="ico ico--mini" aria-hidden="true"><use href="/icons.svg#calendar"></use></svg> Івенти</span>
+                    <span class="chip"><svg class="ico ico--mini" aria-hidden="true"><use href="/icons.svg#users"></use></svg> Майстри</span>
+                </div>
+            </div>
+
+            <aside class="heroCard" data-anim id="heroCard">
+                <div class="glass">
+                    <div class="glass__top">
+                        <div class="kicker">Швидкий старт</div>
+                        <div class="badge">+100 до комфорту</div>
+                    </div>
+                    <ul class="steps">
+                        <li><span class="steps__i">1</span> Дивишся календар</li>
+                        <li><span class="steps__i">2</span> Обираєш формат</li>
+                        <li><span class="steps__i">3</span> Пишеш у Telegram</li>
+                    </ul>
+
+                    <div class="cta">
+                        <a class="btn btn--mini btn--primary" href="#events">В календар</a>
+                        <a class="btn btn--mini btn--ghost" href="#contacts">Контакти</a>
+                    </div>
+
+                    <div class="hint">
+                        Підкажемо правила, підберемо компанію, введемо в гру. Новачок? Це ок ✅
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section__head" data-anim>
+                <h2 class="h2">Про нас</h2>
+                <p class="lead">
+                    <b>Crits n Shits</b> — некомерційна спільнота. Ми збираємось заради гри, дружби і відпочинку мозку.
+                    Внески — тільки на приміщення та базові витрати.
+                </p>
+            </div>
+
+            <div class="cards3" data-anim>
+                <article class="card card--lift">
+                    <h3>Настолки</h3>
+                    <p>Від паті-ігор до стратегій. Є що пограти і що “погоріти”.</p>
+                    <div class="card__meta">Формати: 2–8+ • 30–180 хв</div>
+                </article>
+
+                <article class="card card--lift">
+                    <h3>НРІ</h3>
+                    <p>Сюжети, персонажі, вибір і наслідки. Тут рішення болять, але красиво.</p>
+                    <div class="card__meta">D&D / Pathfinder / інді та авторські</div>
+                </article>
+
+                <article class="card card--lift">
+                    <h3>Варгейми</h3>
+                    <p>Тактика, мініатюри, сценарії. Пахне перемогою і фарбою для моделей.</p>
+                    <div class="card__meta">Скірміші • Ліги • Навчальні ігри</div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="events">
+        <div class="container">
+            <div class="section__head" data-anim>
+                <h2 class="h2">Розклад</h2>
+                <p class="lead">
+                    Актуальні івенти — з календаря. На мобілці автоматично перемикається в список тижня.
+                </p>
+            </div>
+
+            <div class="calendarShell" data-anim>
+                <div class="calendarShell__top">
+                    <div class="calendarShell__title">Події клубу</div>
+                    <div class="calendarShell__hint">Натисни подію — побачиш деталі</div>
+                </div>
+                <div class="calendarWrap">
+                    <div id="calendar" class="calendar"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="games">
+        <div class="container">
+            <div class="section__head" data-anim>
+                <h2 class="h2">Ігри</h2>
+                <p class="lead">Настолки, НРІ та варгейми. Поступово розширюємо бібліотеку.</p>
+            </div>
+
+            <div class="tabs" data-anim>
+                <button class="tab is-active" data-tab="boardgames">
+                    <svg class="ico ico--mini" aria-hidden="true"><use href="/icons.svg#dice"></use></svg>
+                    Настолки
+                </button>
+                <button class="tab" data-tab="rpg">
+                    <svg class="ico ico--mini" aria-hidden="true"><use href="/icons.svg#sword"></use></svg>
+                    НРІ
+                </button>
+                <button class="tab" data-tab="wargames">
+                    <svg class="ico ico--mini" aria-hidden="true"><use href="/icons.svg#chess"></use></svg>
+                    Варгейми
+                </button>
+
+                <div class="tabs__spacer"></div>
+
+                <a class="btn btn--mini btn--ghost moreBtn" data-more="boardgames" href="boardgames-full.html">
+                    Більше настолок <svg class="ico ico--mini" aria-hidden="true"><use href="/icons.svg#arrow-right"></use></svg>
+                </a>
+                <a class="btn btn--mini btn--ghost moreBtn" data-more="rpg" href="rpg-full.html">
+                    Більше НРІ <svg class="ico ico--mini" aria-hidden="true"><use href="/icons.svg#arrow-right"></use></svg>
+                </a>
+                <a class="btn btn--mini btn--ghost moreBtn" data-more="wargames" href="wargames-full.html">
+                    Більше варгеймів <svg class="ico ico--mini" aria-hidden="true"><use href="/icons.svg#arrow-right"></use></svg>
+                </a>
+            </div>
+
+            <div class="gameGrid" id="gamesGrid" data-anim></div>
+            <div class="muted" id="gamesHint" data-anim></div>
+        </div>
+    </section>
+
+    <section class="section" id="masters">
+        <div class="container">
+            <div class="section__head" data-anim>
+                <h2 class="h2">Майстри</h2>
+                <p class="lead">Люди, які ведуть ігри та допомагають новачкам.</p>
+            </div>
+
+            <div class="rail" data-anim>
+                <div class="rail__controls">
+                    <button class="iconBtn" id="mastersPrev" aria-label="Попередні">
+                        <svg class="ico" aria-hidden="true"><use href="/icons.svg#arrow-left"></use></svg>
+                    </button>
+                    <button class="iconBtn" id="mastersNext" aria-label="Наступні">
+                        <svg class="ico" aria-hidden="true"><use href="/icons.svg#arrow-right"></use></svg>
+                    </button>
+                </div>
+
+                <div class="rail__track" id="mastersTrack" tabindex="0" aria-label="Список майстрів"></div>
+                <div class="muted" id="mastersHint"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="gallery">
+        <div class="container">
+            <div class="section__head" data-anim>
+                <h2 class="h2">Галерея</h2>
+                <p class="lead">Фото з івентів та ігрових вечорів.</p>
+            </div>
+
+            <div class="rail" data-anim>
+                <div class="rail__controls">
+                    <button class="iconBtn" id="galleryPrev" aria-label="Попередні">
+                        <svg class="ico" aria-hidden="true"><use href="/icons.svg#arrow-left"></use></svg>
+                    </button>
+                    <button class="iconBtn" id="galleryNext" aria-label="Наступні">
+                        <svg class="ico" aria-hidden="true"><use href="/icons.svg#arrow-right"></use></svg>
+                    </button>
+                    <a class="btn btn--mini btn--ghost" href="gallery-full.html">
+                        Більше галереї <svg class="ico ico--mini" aria-hidden="true"><use href="/icons.svg#arrow-right"></use></svg>
+                    </a>
+                </div>
+
+                <div class="rail__track rail__track--gallery" id="galleryTrack" tabindex="0" aria-label="Галерея"></div>
+                <div class="muted" id="galleryHint"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="rules">
+        <div class="container">
+            <div class="section__head" data-anim>
+                <h2 class="h2">Правила</h2>
+                <p class="lead">Коротко й по суті. Деталі можна розкрити.</p>
+            </div>
+
+            <div class="accordion" id="rulesAcc" data-anim></div>
+
+            <div class="rulesNote" data-anim>
+                <div class="rulesNote__icon" aria-hidden="true">🧠</div>
+                <div>
+                    <b>Філософія клубу:</b> без токсика, без “альфачів”, без криків. Комфорт — це мета.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contacts">
+        <div class="container">
+            <div class="section__head" data-anim>
+                <h2 class="h2">Контакти</h2>
+                <p class="lead">Пиши — підкажемо, що зайде саме тобі.</p>
+            </div>
+
+            <div class="cards3" data-anim>
+                <a class="card linkCard card--lift" href="https://t.me/crits_n_shits" target="_blank" rel="noreferrer">
+                    <div class="linkCard__top">
+                        <div class="linkCard__icon"><svg class="ico" aria-hidden="true"><use href="/icons.svg#chat"></use></svg></div>
+                        <div>
+                            <div class="linkCard__title">Telegram</div>
+                            <div class="linkCard__sub">@crits_n_shits</div>
+                        </div>
+                    </div>
+                    <div class="linkCard__go">Відкрити →</div>
+                </a>
+
+                <div class="card card--lift">
+                    <div class="linkCard__top">
+                        <div class="linkCard__icon"><svg class="ico" aria-hidden="true"><use href="/icons.svg#mail"></use></svg></div>
+                        <div>
+                            <div class="linkCard__title">Email</div>
+                            <div class="linkCard__sub">critsnshits@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="muted">Для питань/пропозицій/організації івентів.</div>
+                </div>
+
+                <div class="card card--lift">
+                    <div class="linkCard__top">
+                        <div class="linkCard__icon"><svg class="ico" aria-hidden="true"><use href="/icons.svg#chat"></use></svg></div>
+                        <div>
+                            <div class="linkCard__title">Discord</div>
+                            <div class="linkCard__sub">discord.gg/xxxxx</div>
+                        </div>
+                    </div>
+                    <div class="muted">Голос, координація, меми.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div>© 2025 Crits n Shits</div>
+            <div class="footer__links">
+                <a href="https://t.me/crits_n_shits" target="_blank" rel="noreferrer">Telegram</a>
+            </div>
+        </div>
+    </footer>
+</main>
+
+<button class="toTop is-off" id="toTop" type="button" aria-label="Наверх">
+    <svg class="ico" aria-hidden="true"><use href="/icons.svg#chev-down"></use></svg>
+</button>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

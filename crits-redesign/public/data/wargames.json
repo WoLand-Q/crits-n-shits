@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Warhammer 40,000",
+    "description": "Футуристичний варгейм з арміями мініатюр",
+    "image": "images/wargames/wh40k.jpg"
+  },
+  {
+    "title": "Kill Team",
+    "description": "Скірміш-версія Warhammer 40,000",
+    "image": "images/wargames/killteam.jpg"
+  }
+]
