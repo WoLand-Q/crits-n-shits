@@ -247,7 +247,7 @@ Run the project with:
 **Using [npm](https://www.npmjs.com/):**
 
 ```sh
-npm start
+npm run dev
 ```
 
 ### 🧪 Testing
