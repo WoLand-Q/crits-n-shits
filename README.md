@@ -210,34 +210,64 @@ This project streamlines the development of dynamic, styled web interfaces for g
 ## 🚀 Getting Started
 
 ### 📋 Prerequisites
+- **Node.js**: Vite 7 requires **Node 20.19+ or 22.12+** (or newer).  
+  Docs: https://vite.dev/guide/migration.html#node-js-support
+- **npm**: comes with Node (this repo uses npm + `package-lock.json`).
+- **Git**: for cloning.
 
-This project requires the following dependencies:
-
-- **Programming Language:** HTML
-- **Package Manager:** Npm
+Optional but handy:
+- **nvm** (macOS/Linux) / **nvm-windows** for switching Node versions quickly.
 
 ### ⚙️ Installation
-
-Build crits-n-shits from the source and install dependencies:
-
-1. **Clone the repository:**
-
-    ```sh
-    ❯ git clone https://github.com/WoLand-Q/crits-n-shits
-    ```
-
-2. **Navigate to the project directory:**
-
-    ```sh
-    ❯ cd crits-n-shits
-    ```
-
-3. **Install the dependencies:**
-
-**Using [npm](https://www.npmjs.com/):**
+Clone the repository:
 
 ```sh
-❯ npm install
+git clone <repo-url>
+cd <repo-folder>
+```
+
+Install dependencies:
+
+```sh
+npm install
+```
+
+Run the dev server:
+
+```sh
+npm run dev
+```
+
+**Clean reinstall (recommended after dependency changes / branch switches)**
+
+- **macOS / Linux**
+
+```sh
+rm -rf node_modules package-lock.json
+npm install
+```
+
+- **Windows (PowerShell)**
+
+```powershell
+Remove-Item -Recurse -Force node_modules, package-lock.json
+npm install
+```
+
+- **Windows (CMD)**
+
+```bat
+rmdir /s /q node_modules
+del package-lock.json
+npm install
+```
+
+**CI / deterministic installs**
+
+If you’re running this in CI (or want a lockfile-faithful install):
+
+```sh
+npm ci
 ```
 
 ### 💻 Usage
@@ -250,17 +280,95 @@ Run the project with:
 npm run dev
 ```
 
-### 🧪 Testing
 
-Crits-n-shits uses the {__test_framework__} test framework. Run the test suite with:
+### 🧱 Build
 
-**Using [npm](https://www.npmjs.com/):**
+Create an optimized production build:
 
-```sh
-npm test
+```bash
+npm run build
 ```
 
----
+The output will be in `dist/`.
+
+### 🔎 Preview the production build locally
+
+```bash
+npm run preview
+```
+
+By default Vite will print the local URL (commonly `http://localhost:4173`).
+
+### 🚢 Production / Deployment
+This project builds to a static site in `dist/` (Vite default). A typical production flow:
+
+1. Build on your machine / CI:
+   ```sh
+   npm ci
+   npm run build
+   ```
+2. Upload the **contents of `dist/`** to your server / hosting.
+3. Serve it with any static server (Nginx, Caddy, Cloudflare Pages, Netlify, etc.).
+
+**Nginx example (SPA-friendly)**
+
+```nginx
+server {
+  listen 80;
+  server_name your-domain.com;
+
+  root /var/www/your-app/dist;
+  index index.html;
+
+  location / {
+    try_files $uri $uri/ /index.html;
+  }
+}
+```
+
+Notes:
+- You need `devDependencies` only for the **build step**. In production you typically just serve `dist/` (no Node runtime required).
+- If your app uses a non-root base path, set Vite’s `base` option accordingly before building.
+
+### 🩹 Troubleshooting
+**Vite / PostCSS error: `Cannot find module '@tailwindcss/postcss'`**
+
+What it means: PostCSS is trying to load Tailwind’s PostCSS plugin, but it’s not installed (or `devDependencies` were skipped).
+
+Docs (Tailwind v4 beta): https://v3.tailwindcss.com/docs/v4-beta
+
+Fix checklist:
+
+1) Make sure you didn’t install *without* dev deps:
+- avoid `npm install --omit=dev` / `npm ci --omit=dev` for local dev/build
+- also check that you’re not globally forcing `NODE_ENV=production` during install/build
+
+2) Clean reinstall (most common fix)
+
+- **Windows (PowerShell)**
+```powershell
+Remove-Item -Recurse -Force node_modules, package-lock.json
+npm install
+```
+
+- **macOS / Linux**
+```sh
+rm -rf node_modules package-lock.json
+npm install
+```
+
+3) If it still complains, explicitly add the plugin and reinstall:
+
+```sh
+npm install -D @tailwindcss/postcss
+```
+
+Also double-check you’re using a supported Node version (see **Prerequisites**) and that you’re running commands in the project root (where `package.json` is).
+
+### 🧪 Testing
+
+Tests are not configured in this repository yet.
+
 
 ## 📈 Roadmap
 
